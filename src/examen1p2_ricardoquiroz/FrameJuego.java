@@ -301,7 +301,15 @@ public class FrameJuego extends javax.swing.JFrame {
 
     private void Button_crearpersoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_crearpersoMouseClicked
         // TODO add your handling code here:
-        personajes.add(new Personaje(TF_crearnombre.getText(), CB_arma., FTF_vida.getText(), FTF_escudo.getText()));
+        if (((String)(CB_tipo.getSelectedItem())).equals("Fortaleza")) {
+            personajes.add(new Fortaleza(TF_crearnombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
+        }
+        else if (((String)(CB_tipo.getSelectedItem())).equals("Medico")) {
+            personajes.add(new Medico(TF_crearnombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
+        }
+        else if (((String)(CB_tipo.getSelectedItem())).equals("Rastreador")) {
+            personajes.add(new Rastreador(TF_crearnombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
+        }
     }//GEN-LAST:event_Button_crearpersoMouseClicked
 
     /**
