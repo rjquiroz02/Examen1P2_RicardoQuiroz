@@ -9,6 +9,21 @@ package examen1p2_ricardoquiroz;
  *
  * @author rjqer
  */
-public class Medico {
+public class Medico extends Personaje{
+
+    public Medico() {
+    }
+
+    public Medico(String nombre, Arma arma, int vida, int escudo) {
+        super(nombre, arma, vida, escudo);
+    }
+
+    @Override
+    public String toString() {
+        return "Medico{" + '}';
+    }
+    
+    
+    
     
 }

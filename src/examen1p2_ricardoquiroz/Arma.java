@@ -11,7 +11,47 @@ package examen1p2_ricardoquiroz;
  */
 public class Arma {
     private String nombre;
-    private int dano, preicion;
+    private int dano, precision;
+
+    public Arma() {
+    }
+
+    public Arma(String nombre, int dano, int precision) {
+        this.nombre = nombre;
+        this.dano = dano;
+        this.precision = precision;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getDano() {
+        return dano;
+    }
+
+    public void setDano(int dano) {
+        this.dano = dano;
+    }
+
+    public int getPrecision() {
+        return precision;
+    }
+
+    public void setPrecision(int precision) {
+        this.precision = precision;
+    }
+
+    @Override
+    public String toString() {
+        return "Arma{" + "nombre=" + nombre + ", dano=" + dano + ", precision=" + precision + '}';
+    }
+    
+    
     
     
 }

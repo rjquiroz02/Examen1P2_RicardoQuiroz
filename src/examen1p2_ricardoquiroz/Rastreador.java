@@ -9,6 +9,20 @@ package examen1p2_ricardoquiroz;
  *
  * @author rjqer
  */
-public class Rastreador {
+public class Rastreador extends Personaje{
+
+    public Rastreador() {
+    }
+
+    public Rastreador(String nombre, Arma arma, int vida, int escudo) {
+        super(nombre, arma, vida, escudo);
+    }
+
+    @Override
+    public String toString() {
+        return "Rastreador{" + '}';
+    }
+    
+    
     
 }
