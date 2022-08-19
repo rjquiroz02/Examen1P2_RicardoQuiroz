@@ -9,7 +9,7 @@ package examen1p2_ricardoquiroz;
  *
  * @author rjqer
  */
-public class Personaje {
+public abstract class Personaje {
     protected String nombre;
     protected Arma arma;
     protected int vida, escudo;
@@ -61,7 +61,7 @@ public class Personaje {
         return "Personaje{" + "nombre=" + nombre + ", arma=" + arma + ", vida=" + vida + ", escudo=" + escudo + '}';
     }
     
-    
+    public abstract int danotipo();
     
     
 }

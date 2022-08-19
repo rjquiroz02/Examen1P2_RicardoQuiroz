@@ -22,6 +22,11 @@ public class Medico extends Personaje{
     public String toString() {
         return "Medico{" + '}';
     }
+
+    @Override
+    public int danotipo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

@@ -22,6 +22,11 @@ public class Rastreador extends Personaje{
     public String toString() {
         return "Rastreador{" + '}';
     }
+
+    @Override
+    public int danotipo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
