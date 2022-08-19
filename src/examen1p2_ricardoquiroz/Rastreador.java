@@ -20,7 +20,7 @@ public class Rastreador extends Personaje{
 
     @Override
     public String toString() {
-        return "Rastreador{" + '}';
+        return super.toString() + "Rastreador{" + '}';
     }
 
     @Override

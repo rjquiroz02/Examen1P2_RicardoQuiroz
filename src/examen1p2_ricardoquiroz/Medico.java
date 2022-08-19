@@ -20,7 +20,7 @@ public class Medico extends Personaje{
 
     @Override
     public String toString() {
-        return "Medico{" + '}';
+        return super.toString() + "Medico{" + '}';
     }
 
     @Override

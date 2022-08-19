@@ -20,7 +20,7 @@ public class Fortaleza extends Personaje{
 
     @Override
     public String toString() {
-        return "Fortaleza{" + '}';
+        return super.toString() + "Fortaleza{" + '}';
     }
 
     @Override

@@ -6,6 +6,7 @@
 package examen1p2_ricardoquiroz;
 
 import java.util.ArrayList;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  *
@@ -313,11 +314,21 @@ public class FrameJuego extends javax.swing.JFrame {
         else if (((String)(CB_tipo.getSelectedItem())).equals("Rastreador")) {
             personajes.add(new Rastreador(TF_nombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
         }
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_seleccionar.getModel();
+        for (Personaje personaje : personajes) {
+            mod.addElement(personaje);
+        }
+        Personaje nuevopersonaje = (Personaje)CB_seleccionar.getSelectedItem();
     }//GEN-LAST:event_Button_crearpersoMouseClicked
 
     private void Button_creararmaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_creararmaMouseClicked
         // TODO add your handling code here:
         armas.add(new Arma(TF_crearnombre.getText(), Integer.parseInt(FTF_dano.getText()), Integer.parseInt(FTF_precision.getText())));
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel)CB_arma.getModel();
+        for (Arma arma : armas) {
+            modelo.addElement(arma);
+        }
+        Arma nuevaarma = (Arma)CB_arma.getSelectedItem();
     }//GEN-LAST:event_Button_creararmaMouseClicked
 
     /**
