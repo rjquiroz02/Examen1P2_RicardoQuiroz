@@ -67,8 +67,6 @@ public class FrameJuego extends javax.swing.JFrame {
         Label_selperso.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         Label_selperso.setText("Seleccionar Personaje");
 
-        CB_seleccionar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         Button_seleccionar.setText("Seleccionar");
 
         javax.swing.GroupLayout Panel_seleccionarLayout = new javax.swing.GroupLayout(Panel_seleccionar);
@@ -92,7 +90,7 @@ public class FrameJuego extends javax.swing.JFrame {
                 .addComponent(CB_seleccionar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(Button_seleccionar)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addContainerGap(275, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Seleccionar", Panel_seleccionar);
@@ -180,6 +178,11 @@ public class FrameJuego extends javax.swing.JFrame {
         jLabel9.setText("Dano");
 
         Button_creararma.setText("Crear Arma");
+        Button_creararma.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_creararmaMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Panel_crearLayout = new javax.swing.GroupLayout(Panel_crear);
         Panel_crear.setLayout(Panel_crearLayout);
@@ -292,7 +295,7 @@ public class FrameJuego extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane2)
+                .addComponent(jTabbedPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -302,15 +305,20 @@ public class FrameJuego extends javax.swing.JFrame {
     private void Button_crearpersoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_crearpersoMouseClicked
         // TODO add your handling code here:
         if (((String)(CB_tipo.getSelectedItem())).equals("Fortaleza")) {
-            personajes.add(new Fortaleza(TF_crearnombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
+            personajes.add(new Fortaleza(TF_nombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
         }
         else if (((String)(CB_tipo.getSelectedItem())).equals("Medico")) {
-            personajes.add(new Medico(TF_crearnombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
+            personajes.add(new Medico(TF_nombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
         }
         else if (((String)(CB_tipo.getSelectedItem())).equals("Rastreador")) {
-            personajes.add(new Rastreador(TF_crearnombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
+            personajes.add(new Rastreador(TF_nombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
         }
     }//GEN-LAST:event_Button_crearpersoMouseClicked
+
+    private void Button_creararmaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_creararmaMouseClicked
+        // TODO add your handling code here:
+        armas.add(new Arma(TF_crearnombre.getText(), Integer.parseInt(FTF_dano.getText()), Integer.parseInt(FTF_precision.getText())));
+    }//GEN-LAST:event_Button_creararmaMouseClicked
 
     /**
      * @param args the command line arguments
