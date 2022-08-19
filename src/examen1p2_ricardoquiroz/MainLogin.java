@@ -48,6 +48,11 @@ public class MainLogin extends javax.swing.JFrame {
         TituloContrasena.setText("Contrasena");
 
         Button_ingresar.setText("Ingresar");
+        Button_ingresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Button_ingresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout PanelLoginLayout = new javax.swing.GroupLayout(PanelLogin);
         PanelLogin.setLayout(PanelLoginLayout);
@@ -101,6 +106,12 @@ public class MainLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Button_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button_ingresarActionPerformed
+        // TODO add your handling code here:
+        FrameJuego f = new FrameJuego();
+        f.setVisible(true);
+    }//GEN-LAST:event_Button_ingresarActionPerformed
 
     /**
      * @param args the command line arguments
