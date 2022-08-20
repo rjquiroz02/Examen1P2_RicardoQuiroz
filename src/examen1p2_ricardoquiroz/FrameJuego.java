@@ -6,6 +6,7 @@
 package examen1p2_ricardoquiroz;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.DefaultComboBoxModel;
 
 /**
@@ -133,6 +134,11 @@ public class FrameJuego extends javax.swing.JFrame {
 
         Button_atacar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Button_atacar.setText("Atacar");
+        Button_atacar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_atacarMouseClicked(evt);
+            }
+        });
 
         TA_juego.setColumns(20);
         TA_juego.setRows(5);
@@ -370,9 +376,18 @@ public class FrameJuego extends javax.swing.JFrame {
 
     private void Button_comenzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_comenzarMouseClicked
         // TODO add your handling code here:
+        tiempo = new Date();//tiempo de comienzo de la partida
+        
         
     }//GEN-LAST:event_Button_comenzarMouseClicked
 
+    private void Button_atacarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_atacarMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_Button_atacarMouseClicked
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -408,7 +423,7 @@ public class FrameJuego extends javax.swing.JFrame {
         });
     }
     
-    
+    private Date tiempo;
     private ArrayList<Arma> armas = new ArrayList();
     private ArrayList<Personaje> personajes = new ArrayList();
     private ArrayList<Jugador> jugadores = new ArrayList();
