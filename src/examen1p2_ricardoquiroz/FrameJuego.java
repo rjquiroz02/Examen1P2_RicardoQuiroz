@@ -331,6 +331,8 @@ public class FrameJuego extends javax.swing.JFrame {
             personajes.add(new Rastreador(TF_nombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
         }        
         DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_seleccionar.getModel();
+        //DefaultComboBoxModel.removeAllElements();
+        mod.removeAllElements();
         for (Personaje personaje : personajes) {
             mod.addElement(personaje);
         }
@@ -341,6 +343,7 @@ public class FrameJuego extends javax.swing.JFrame {
         // TODO add your handling code here:
         armas.add(new Arma(TF_crearnombre.getText(), Integer.parseInt(FTF_dano.getText()), Integer.parseInt(FTF_precision.getText())));
         DefaultComboBoxModel modelo = (DefaultComboBoxModel)CB_arma.getModel();
+        modelo.removeAllElements();
         for (Arma arma : armas) {
             modelo.addElement(arma);
         }
