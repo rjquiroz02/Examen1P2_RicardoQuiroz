@@ -19,6 +19,22 @@ public class FrameJuego extends javax.swing.JFrame {
      */
     public FrameJuego() {
         initComponents();
+        armas.add(new Arma("Flatline", 25, 75));
+        armas.add(new Arma("Peacekeeper", 70, 40));
+        armas.add(new Arma("R301", 18, 90));
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel)CB_arma.getModel();
+        for (Arma arma : armas) {
+            modelo.addElement(arma);
+        }
+        Arma nuevaarma = (Arma)CB_arma.getSelectedItem();
+        personajes.add(new Fortaleza("Newcastle", armas.get(0), 100, 80));
+        personajes.add(new Medico("Lifeline", armas.get(1), 100, 10));
+        personajes.add(new Rastreador("Pathfinder", armas.get(2), 70, 60));
+        DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_seleccionar.getModel();
+        for (Personaje personaje : personajes) {
+            mod.addElement(personaje);
+        }
+        Personaje nuevopersonaje = (Personaje)CB_seleccionar.getSelectedItem();
     }
 
     /**
@@ -313,7 +329,7 @@ public class FrameJuego extends javax.swing.JFrame {
         }
         else if (((String)(CB_tipo.getSelectedItem())).equals("Rastreador")) {
             personajes.add(new Rastreador(TF_nombre.getText(), ((Arma)CB_arma.getSelectedItem()), (Integer.parseInt(FTF_vida.getText())), Integer.parseInt(FTF_escudo.getText())));
-        }
+        }        
         DefaultComboBoxModel mod = (DefaultComboBoxModel)CB_seleccionar.getModel();
         for (Personaje personaje : personajes) {
             mod.addElement(personaje);
