@@ -105,6 +105,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Seleccionar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_seleccionarMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>
@@ -167,6 +170,9 @@
                 </Property>
                 <Property name="text" type="java.lang.String" value="Comenzar"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button_comenzarMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Label_restantes">
               <Properties>

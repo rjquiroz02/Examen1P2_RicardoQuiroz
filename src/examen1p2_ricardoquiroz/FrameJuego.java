@@ -85,6 +85,11 @@ public class FrameJuego extends javax.swing.JFrame {
         Label_selperso.setText("Seleccionar Personaje");
 
         Button_seleccionar.setText("Seleccionar");
+        Button_seleccionar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_seleccionarMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout Panel_seleccionarLayout = new javax.swing.GroupLayout(Panel_seleccionar);
         Panel_seleccionar.setLayout(Panel_seleccionarLayout);
@@ -114,6 +119,11 @@ public class FrameJuego extends javax.swing.JFrame {
 
         Button_comenzar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         Button_comenzar.setText("Comenzar");
+        Button_comenzar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Button_comenzarMouseClicked(evt);
+            }
+        });
 
         Label_restantes.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         Label_restantes.setText("Restantes: ");
@@ -349,6 +359,16 @@ public class FrameJuego extends javax.swing.JFrame {
         }
         Arma nuevaarma = (Arma)CB_arma.getSelectedItem();
     }//GEN-LAST:event_Button_creararmaMouseClicked
+
+    private void Button_seleccionarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_seleccionarMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_Button_seleccionarMouseClicked
+
+    private void Button_comenzarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button_comenzarMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_Button_comenzarMouseClicked
 
     /**
      * @param args the command line arguments
