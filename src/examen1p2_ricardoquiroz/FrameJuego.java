@@ -18,7 +18,7 @@ public class FrameJuego extends javax.swing.JFrame {
      * Creates new form FrameJuego
      */
     public FrameJuego() {
-        initComponents();
+        initComponents();       
         armas.add(new Arma("Flatline", 25, 75));
         armas.add(new Arma("Peacekeeper", 70, 40));
         armas.add(new Arma("R301", 18, 90));
@@ -35,6 +35,9 @@ public class FrameJuego extends javax.swing.JFrame {
             mod.addElement(personaje);
         }
         Personaje nuevopersonaje = (Personaje)CB_seleccionar.getSelectedItem();
+        jugadores.add(new Jugador("Lecuga", "543", "contrasena", personajes.get(0)));
+        jugadores.add(new Jugador("Loco Bryan", "23", "contrasena", personajes.get(1)));
+        jugadores.add(new Jugador("Dr. Nuila", "2", "contrasena", personajes.get(2)));
     }
 
     /**
@@ -408,6 +411,7 @@ public class FrameJuego extends javax.swing.JFrame {
     
     private ArrayList<Arma> armas = new ArrayList();
     private ArrayList<Personaje> personajes = new ArrayList();
+    private ArrayList<Jugador> jugadores = new ArrayList();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button_atacar;
     private javax.swing.JButton Button_comenzar;
